@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 var versionCmd = &cobra.Command{
@@ -11,7 +12,7 @@ var versionCmd = &cobra.Command{
 	Short: "Shows the current version of the cli",
 	Long:  `All software has versions. This is CLI's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Golang CLI Template v0.9 -- HEAD")
+		fmt.Printf("Golang CLI Template %s\n", viper.GetString("version"))
 	},
 }
 
