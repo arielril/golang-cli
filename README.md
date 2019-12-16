@@ -10,6 +10,12 @@ This is a template repository to create CLI using golang. It creates a powerful 
 
 Create your own `.config.yaml` file to configure the CLI.
 
+To set up the git hooks run the following command.
+
+```bash
+cp ./scripts/pre-commit-hook.sh .git/hooks/pre-commit
+```
+
 ## Running Locally
 
 ```bash
