@@ -14,6 +14,7 @@ To set up the git hooks run the following command.
 
 ```bash
 cp ./scripts/pre-commit-hook.sh .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
 ```
 
 ## Running Locally
