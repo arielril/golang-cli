@@ -1,8 +1,6 @@
 # Go CLI - Template
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/arielril/golang-cli)](https://goreportcard.com/report/github.com/arielril/golang-cli)
-[![Build Status](https://cloud.drone.io/api/badges/arielril/golang-cli/status.svg)](https://cloud.drone.io/arielril/golang-cli)
-[![codecov](https://codecov.io/gh/arielril/golang-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/arielril/golang-cli)
 
 This is a template repository to create CLI using golang. It creates a powerful cli using Cobra and Viper as main packages.
 
