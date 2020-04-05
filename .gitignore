@@ -1,63 +1,38 @@
-# Created by https://www.gitignore.io/api/go,code,macos
-# Edit at https://www.gitignore.io/?templates=go,code,macos
+# Go CLI - Template
 
-### Code ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+[![Go Report Card](https://goreportcard.com/badge/github.com/arielril/golang-cli)](https://goreportcard.com/report/github.com/arielril/golang-cli)
 
-### Go ###
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+This is a template repository to create CLI using golang. It creates a powerful cli using Cobra and Viper as main packages.
 
-# Test binary, built with `go test -c`
-*.test
+## Setup
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+Create your own `.config.yaml` file to configure the CLI.
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+To set up the git hooks run the following command.
 
-### Go Patch ###
-/vendor/
-/Godeps/
+```bash
+cp ./scripts/pre-commit-hook.sh .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+```
 
-### macOS ###
-# General
-.DS_Store
-.AppleDouble
-.LSOverride
+## Running Locally
 
-# Icon must end with two \r
-Icon
+```bash
+go run ./cmd/golang-cli/main.go help
+```
 
-# Thumbnails
-._*
+## Dependency Management
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
+This package uses [go modules](https://github.com/golang/go/wiki/Modules). Whenever you run `go build` or `go test` all dependencies will be downloaded automatically. See [go.mod](./go.mod) and [go.sum](go.sum) to see all modules used by this package.
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+## Configuration
 
-# End of https://www.gitignore.io/api/go,code,macos
+### Runtime
 
-# Config file
-.config.yaml
+Many settings are set throught the `.config.yaml` file and read using the [Viper](https://github.com/spf13/viper) package to set the configuration of the project and to retrieve the configuration values.
+
+An example of the configuration file can be found at `configs/.config.example.yaml`.
+
+## Project Structure
+
+The project structure used follows the project layout defined in [Golang Standards - Project Layout](https://github.com/golang-standards/project-layout), which used a lot of definitions found in the web and compiled an unified layout.
